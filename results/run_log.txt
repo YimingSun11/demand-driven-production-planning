@@ -1,0 +1,115 @@
+
+DEPLOYABLE (M1, target 98%)
+       item rule  fill  leftover_per_day  sat_covered  windows_below_target  windows
+Lamb chops    A 0.983            24.624         0.72                     5       12
+Lamb chops    W 0.979            20.191         0.84                     5       12
+Lamb chops    F 0.979            16.315         0.84                     5       12
+Lamb chops    B 0.973            13.879         0.82                     6       12
+Lamb chops    C 0.977            13.421         0.92                     5       12
+     Steak    A 0.973            19.794         0.72                     4       12
+     Steak    W 0.971            13.876         0.82                     5       12
+     Steak    F 0.975            11.991         0.88                     4       12
+     Steak    B 0.966            10.341         0.86                     5       12
+     Steak    C 0.970            10.000         0.92                     5       12
+   Chicken    A 0.971            21.685         0.68                     5       12
+   Chicken    W 0.974            22.588         0.74                     4       12
+   Chicken    F 0.978            20.347         0.78                     4       12
+   Chicken    B 0.961            12.644         0.76                     4       12
+   Chicken    C 0.976            14.124         0.84                     6       12
+ Meatballs    A 0.969            14.541         0.70                     5       12
+ Meatballs    W 0.965            12.321         0.82                     5       12
+ Meatballs    F 0.971            11.253         0.88                     5       12
+ Meatballs    B 0.958             9.847         0.84                     7       12
+ Meatballs    C 0.965             9.579         0.92                     5       12
+
+CALIBRATION @98% (across 4 items)
+                           method rule  fill_min  fill_max  leftover  below  windows
+ M1 quantile (56-day validation)    A     0.969     0.983    20.161     19       48
+ M1 quantile (56-day validation)    B     0.958     0.973    11.678     22       48
+ M1 quantile (56-day validation)    C     0.965     0.977    11.781     21       48
+ M1 quantile (56-day validation)    F     0.971     0.979    14.976     18       48
+ M1 quantile (56-day validation)    W     0.965     0.979    17.244     19       48
+         M2 quantile + 5% buffer    A     0.977     0.987    22.791     13       48
+         M2 quantile + 5% buffer    B     0.970     0.982    13.824     18       48
+         M2 quantile + 5% buffer    C     0.976     0.985    13.959     16       48
+         M2 quantile + 5% buffer    F     0.982     0.986    17.357     14       48
+         M2 quantile + 5% buffer    W     0.977     0.985    19.701     13       48
+        M2a quantile + 3% buffer    A     0.975     0.986    21.965     16       48
+        M2a quantile + 3% buffer    B     0.966     0.980    13.110     19       48
+        M2a quantile + 3% buffer    C     0.972     0.982    13.182     18       48
+        M2a quantile + 3% buffer    F     0.978     0.985    16.534     17       48
+        M2a quantile + 3% buffer    W     0.972     0.984    18.887     14       48
+       M2b quantile + 10% buffer    A     0.981     0.991    24.978     11       48
+       M2b quantile + 10% buffer    B     0.975     0.988    15.496     15       48
+       M2b quantile + 10% buffer    C     0.982     0.989    15.681     13       48
+       M2b quantile + 10% buffer    F     0.985     0.990    19.305     11       48
+       M2b quantile + 10% buffer    W     0.982     0.989    21.706     12       48
+M3 quantile (112-day validation)    A     0.966     0.986    20.490     17       48
+M3 quantile (112-day validation)    B     0.958     0.982    12.149     22       48
+M3 quantile (112-day validation)    C     0.962     0.985    12.240     20       48
+M3 quantile (112-day validation)    F     0.966     0.983    13.387     18       48
+M3 quantile (112-day validation)    W     0.964     0.982    16.185     19       48
+
+EX-POST @98% leftover/day
+ rule             A       W       F       B       C  F_vs_A  B_vs_A
+item                                                              
+Chicken     22.397  17.989  15.699  15.390  13.564   0.299   0.313
+Lamb chops  21.681  19.010  14.085  14.331  13.037   0.350   0.339
+Meatballs   15.467  14.229  12.267  12.232  11.639   0.207   0.209
+Steak       18.840  14.028  12.638  11.658  10.729   0.329   0.381
+
+EX-POST F vs A range by target
+         min    max
+fill              
+0.95  0.193  0.345
+0.97  0.182  0.326
+0.98  0.207  0.350
+0.99  0.247  0.372
+
+DEPLOYABLE MATCHED FILL
+       item  fill      A      W      F      B      C  W_vs_A  F_vs_A  B_vs_A  C_vs_A
+   Chicken 0.965 18.287 14.698 12.017 13.557  9.463   0.196   0.343   0.259   0.483
+   Chicken 0.970 20.997 16.021 13.602 14.821 13.320   0.237   0.352   0.294   0.366
+   Chicken 0.975 23.706 22.815 15.073 19.042 14.530   0.038   0.364   0.197   0.387
+Lamb chops 0.965 16.987 14.724 11.463 11.749  9.844   0.133   0.325   0.308   0.420
+Lamb chops 0.970 18.381 16.082 12.811 12.389 10.841   0.125   0.303   0.326   0.410
+Lamb chops 0.975 20.445 18.122 13.814 14.148 12.661   0.114   0.324   0.308   0.381
+ Meatballs 0.965 13.359 12.279  9.616 11.057  9.580   0.081   0.280   0.172   0.283
+ Meatballs 0.970 14.236 12.781 11.006 11.712  9.945   0.102   0.227   0.177   0.301
+ Meatballs 0.975 15.862 13.880 11.705 13.536 11.123   0.125   0.262   0.147   0.299
+     Steak 0.965 16.944 12.043 10.361 10.463  9.293   0.289   0.389   0.382   0.452
+     Steak 0.970 18.409 13.558 11.227 11.264  9.994   0.264   0.390   0.388   0.457
+     Steak 0.975 20.376 15.751 12.067 12.527 11.061   0.227   0.408   0.385   0.457
+
+SAME PRESET TARGET, F vs A (40 runs): fill diff -0.43 to 0.69 pp; leftover cut 6.2% to 39.4% (median 32.5%)
+
+BUFFER TRADEOFF (F, 98%)
+             extra_leftover  shortfall_avoided  leftover_per_shortfall_avoided
+item                                                                         
+Chicken               2.72               0.17                           15.93
+Lamb chops            2.79               0.25                           11.16
+Meatballs             1.94               0.24                            8.22
+Steak                 2.08               0.14                           14.71
+
+SMALL DISHES (M1, 98%)
+   item rule  fill  leftover_per_day
+ Squid    A 0.970             5.418
+ Squid    F 0.982             3.935
+ Squid    C 0.985             3.826
+  Fish    A 0.974             6.662
+  Fish    F 0.970             5.574
+  Fish    C 0.971             5.397
+Shrimp    A 0.982             7.812
+Shrimp    F 0.975             5.894
+Shrimp    C 0.970             6.000
+
+CEILING: windows below 98%
+       item  cap_q window_start  fill
+Lamb chops   0.99   2014-11-29 0.978
+Lamb chops   0.99   2015-01-28 0.977
+Lamb chops   0.99   2015-02-25 0.976
+     Steak   0.99   2014-11-29 0.966
+     Steak   1.00   2014-11-29 0.970
+   Chicken   0.99   2015-01-28 0.979
+   Chicken   0.99   2015-06-17 0.967
+ Meatballs   0.99   2015-10-07 0.976
